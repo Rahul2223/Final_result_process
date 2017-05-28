@@ -5,7 +5,7 @@
 @section ('admin-content')
 
 <br>
-        <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
+       <div class=" col-md-3"></div><div class="col-md-6 ">
           <div class="panel panel-default">
             <div class="panel-heading">
               <h3 class="panel-title"> Teacher Information</h3>

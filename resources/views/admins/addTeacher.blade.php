@@ -10,7 +10,18 @@
             <div class="panel-heading">
               <h3 class="panel-title"> Teacher Information</h3>
             </div>
+            @if (count($errors) > 0)
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+
             <div class="panel-body">
+             {!!Form::open(['action'=>'teachers_controller@store'])!!}
               <form role="form">
                 <div class="row">
                  
@@ -38,23 +49,28 @@
 
                 <div class="form-group">
                  <label>Applying Subject</label>
-                  <input type="text" name="mname" id="mname" class="form-control input-sm" placeholder="Applying Subject">
+                  <input type="text" name="subject" id="mname" class="form-control input-sm" placeholder="Applying Subject">
                 </div>
                  
                  <div class="form-group">
                       <!-- <input type="" name="password" id="password" class="form-control input-sm" placeholder="Password"> -->
-                      <label>Educational Qualification</label>
-                      <textarea class="form-control "> </textarea>
+                      <label>Edu. Qualification</label>
+                      <textarea class="form-control" class="form-control" name="qualification"> </textarea>
                     </div>
+
+                <div class="form-group">
+                 <label>Contact</label>
+                  <input type="text" name="contact" id="mname" class="form-control input-sm" placeholder="contact">
+                </div>
                     <div class="form-group">
                       <!-- <input type="" name="password" id="password" class="form-control input-sm" placeholder="Password"> -->
                       <label>Address</label>
-                      <textarea class="form-control "> </textarea>
+                      <textarea class="form-control" name="address"> </textarea>
                     </div>
                   
                 
-                <a class="btn btn-primary" href="{{('teacherInfo')}}" role="button">Add</a>              
-              </form>
+                 <button class="btn btn-info">submit</button>              
+             {!!Form::close()!!}
             
 
 @endsection

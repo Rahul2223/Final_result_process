@@ -28,27 +28,31 @@ public function index()
 	return view('admins.index');
 }
 
-public function teacher()
-{
-	return view('admins.teacherInfo');
-}
-public function addteacher()
-{
-	return view('admins.addTeacher');
-}
+
 public function addstudent()
 {
 	 
 	 return view('admins.addStudent');
 }
+public function editstudent()
+{
+	return view('admins.editStudent');
+}
 public function store(Request $request)
 {
-/*
+
  $this->validate($request,[
-        'name'=>'required|unique:Studentinfo|max:255',
-        'address'=>'required`enter code here`',
-        'age'=>'required',
-    ]);*/
+        'fullname'=>'required',
+        'class'=>'required',
+        'roll'=>'required',
+        'fname'=>'required',
+        'mname'=>'required',
+        'gender'=>'required',
+        'dob'=>'required',
+        'contact'=>'required',
+        'address'=>'required',
+
+    ]);
 
 $studentinfo=new Studentinfo;
 

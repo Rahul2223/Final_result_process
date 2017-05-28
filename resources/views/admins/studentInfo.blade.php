@@ -51,7 +51,7 @@
         <th>Date of Birth</th>
         <th>Address</th>
         <th>Contact</th>
-        <th>Edit</th>
+        <th>Option</th>
       </tr>
     </thead>
     <tbody>

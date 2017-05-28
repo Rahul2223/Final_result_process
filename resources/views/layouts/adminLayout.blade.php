@@ -73,11 +73,11 @@
 
                         <li><a  href="{{route('studentinfo')}}">Student List</a> </li>
     <!--    <li><a href="class.html"> Class  </a></li> -->
-        <li><a href="{{url('teacherInfo')}}"> Teacher Info</a></li>
-        <li><a href="classTeacher.html">Class Teacher</a></li>
+        <li><a href="{{route('teacherinfo')}}"> Teacher Info</a></li>
+        <li><a href="">Class Teacher</a></li>
         <!-- <li><a href="exam.html"> Exam List </a></li>
         <li><a href="marksSheet.html">MarkSheet</a> -->
-        <li><a href="veiwResult.html">View Result</a></li>
+        <li><a href="">View Result</a></li>
          </li>
                     </ul>
                 </div>
