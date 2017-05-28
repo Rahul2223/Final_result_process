@@ -11,41 +11,25 @@
 |
 */
 
-Route::get('/studentlist','studentlist_controller@index');
+Route::get('/studentlist',['as'=>'studentinfo','uses'=>'studentlist_controller@studentList']);
+Route::get('/addstudent',['as'=>'addstudent','uses'=>'studentlist_controller@addstudent']);
+//Route::get('/store',['as'=>'store','uses'=>'studentlist_controller@store']);
+Route::POST('/store',['as'=>'store','uses'=>'studentlist_controller@store']);
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/','studentlist_controller@index');
+Route::get('/teacherInfo','studentlist_controller@teacher');
+Route::get('/addTeacher','studentlist_controller@addteacher');
+
+
 
 Route::get('login',function(){
 
  return view('admins.login');
 });
 Route::get('index',function(){
- return view('admins.index');
+return view('admins.index');
 });
-
-Route::get('studentInfo',function(){
- return view('admins.studentInfo');
-});
-Route::get('addStudent',function(){
- return view('admins.addStudent');
-});
-// Route::get('studentInfol',function(){
-//  return view('admins.studentInfo');
-// });
  Route::get('editStudent',function(){
   return view('admins.editStudent');
  });
-// Route::get('studentInfop',function(){
-//  return view('admins.studentInfo');
-// });
-Route::get('teacherInfo',function(){
- return view('admins.teacherInfo');
-});
-Route::get('addTeacher',function(){
- return view('admins.addTeacher');
-});
-Route::get('editTeacher',function(){
- return view('admins.editTeacher');
-});
+

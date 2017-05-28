@@ -69,9 +69,9 @@
                             </div>
                             <!-- /input-group -->
                         </li>
-                          <li><a  href="index.html">Admin</a> </li>
+                          <li><a  href="{{url('index')}}">Admin</a> </li>
 
-                        <li><a  href="{{ url('studentInfo')}}">Student List</a> </li>
+                        <li><a  href="{{route('studentinfo')}}">Student List</a> </li>
     <!--    <li><a href="class.html"> Class  </a></li> -->
         <li><a href="{{url('teacherInfo')}}"> Teacher Info</a></li>
         <li><a href="classTeacher.html">Class Teacher</a></li>

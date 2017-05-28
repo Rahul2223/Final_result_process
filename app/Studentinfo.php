@@ -10,6 +10,6 @@ class Studentinfo extends Model
     //
     protected $table="studentlist";
     protected $fillable = [
-        'name', 'roll', 'fathers_name','class','mothersname','birth','address','gender'
+        'name', 'roll', 'fathers_name','class','mothers_name','dob','address','gender','contact',
     ];
 }

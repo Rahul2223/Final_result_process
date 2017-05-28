@@ -5,7 +5,7 @@
 @section ('admin-content')
 
       <br>
-        <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
+        <div class=" col-md-3"></div><div class="col-md-6 ">
           <div class="panel panel-default">
             <div class="panel-heading">
               <h3 class="panel-title"> Teacher Information</h3>
@@ -15,12 +15,7 @@
                 <div class="row">
                  
                  
-                  <div class="col-xs-12 col-sm-12 col-md-12">
-                    <div class="form-group">
-                    <label>Id</label>
-                      <input type="text" name="fullname" id="first_name" class="form-control input-sm" placeholder="Id_number">
-                    </div>
-                  </div>
+                  
 
                   <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
