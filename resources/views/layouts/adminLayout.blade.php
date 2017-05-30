@@ -12,19 +12,19 @@
     <title>Result Process</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{!!asset('vendor/bootstrap/css/bootstrap.min.css')!!}" rel="stylesheet">
 
     <!-- MetisMenu CSS -->
-    <link href="vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+    <link href="{!!asset('vendor/metisMenu/metisMenu.min.css')!!}" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="dist/css/sb-admin-2.css" rel="stylesheet">
+    <link href="{!!asset('dist/css/sb-admin-2.css')!!}" rel="stylesheet">
 
     <!-- Morris Charts CSS -->
-    <link href="vendor/morrisjs/morris.css" rel="stylesheet">
+    <link href="{!!asset('vendor/morrisjs/morris.css')!!}" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="{!!asset('vendor/font-awesome/css/font-awesome.min.css')!!}" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -71,9 +71,9 @@
                         </li>
                           <li><a  href="{{url('index')}}">Admin</a> </li>
 
-                        <li><a  href="{{route('studentinfo')}}">Student List</a> </li>
+                        <li><a  href="{{route('studentinfo')}}">Student</a> </li>
     <!--    <li><a href="class.html"> Class  </a></li> -->
-        <li><a href="{{route('teacherinfo')}}"> Teacher Info</a></li>
+        <li><a href="{{route('teacherinfo')}}"> Teacher</a></li>
         <li><a href="">Class Teacher</a></li>
         <!-- <li><a href="exam.html"> Exam List </a></li>
         <li><a href="marksSheet.html">MarkSheet</a> -->

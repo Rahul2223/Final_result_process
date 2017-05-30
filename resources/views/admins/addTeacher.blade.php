@@ -23,7 +23,7 @@
             <div class="panel-body">
              {!!Form::open(['action'=>'teachers_controller@store'])!!}
               <form role="form">
-                <div class="row">
+                <!-- <div class="row"> -->
                  
                  
                   
@@ -37,36 +37,48 @@
                   <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
                     <label>Father's Name</label>
-                      <input type="text" name="fname" id="fname" class="form-control input-sm" placeholder="Fathers Name">
+                      <input type="text" name="fname" id="fname" class="form-control input-sm" placeholder="Fathers Name" required="required">
                     </div>
                   </div>
-                </div>
+                <!-- </div> -->
 
-                <div class="form-group">
+                <!-- <div class="form-group">
                  <label>Mother's Name</label>
                   <input type="text" name="mname" id="mname" class="form-control input-sm" placeholder="Mothers name">
-                </div>
-
+                </div> -->
+                 <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="form-group">
+                    <label>Mother's Name</label>
+                      <input type="text" name="mname" id="mname" class="form-control input-sm" placeholder="Mothers Name" required="required">
+                    </div>
+                  </div>
+   
+                <div class="col-xs-12 col-sm-12 col-md-12">
                 <div class="form-group">
                  <label>Applying Subject</label>
                   <input type="text" name="subject" id="mname" class="form-control input-sm" placeholder="Applying Subject">
                 </div>
-                 
+                 </div>
                  <div class="form-group">
                       <!-- <input type="" name="password" id="password" class="form-control input-sm" placeholder="Password"> -->
-                      <label>Edu. Qualification</label>
+                    <!--   <label>Edu. Qualification</label>
                       <textarea class="form-control" class="form-control" name="qualification"> </textarea>
-                    </div>
+                    </div> -->
 
-                <div class="form-group">
-                 <label>Contact</label>
-                  <input type="text" name="contact" id="mname" class="form-control input-sm" placeholder="contact">
-                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12">
                     <div class="form-group">
-                      <!-- <input type="" name="password" id="password" class="form-control input-sm" placeholder="Password"> -->
-                      <label>Address</label>
-                      <textarea class="form-control" name="address"> </textarea>
+                    <label>Contact</label>
+                      <input type="text" name="contact" id="first_name" class="form-control input-sm" placeholder="contact" required="required">
                     </div>
+                  </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="form-group">
+                      <label>Address</label>
+                      <textarea class="form-control " name="address" required="required"> </textarea>
+                    </div>
+                  
+                  </div>
+                </div>
                   
                 
                  <button class="btn btn-info">submit</button>              

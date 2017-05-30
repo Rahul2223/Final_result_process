@@ -13,16 +13,20 @@
 
 Route::get('/studentlist',['as'=>'studentinfo','uses'=>'studentlist_controller@studentList']);
 Route::get('/addstudent',['as'=>'addstudent','uses'=>'studentlist_controller@addstudent']);
-//Route::get('/store',['as'=>'store','uses'=>'studentlist_controller@store']);
-Route::POST('/store',['as'=>'store','uses'=>'studentlist_controller@store']);
+Route::POST('/studentstore',['as'=>'studentstore','uses'=>'studentlist_controller@store']);
 Route::get('/editStudent','studentlist_controller@editstudent');
 Route::get('/','studentlist_controller@index');
+Route::get('/editstudentinfo/{id}', ['as' => 'editstudentdata', 'uses' => 'studentlist_controller@edit']);
+
+Route::POST('/updatestudentinfo', ['as' => 'updatestudentdata', 'uses' => 'studentlist_controller@update']);
+
 
 Route::get('/teacherlist',['as'=>'teacherinfo','uses'=>'teachers_controller@teacherList']);
 Route::get('/addteacher',['as'=>'addteacher','uses'=>'teachers_controller@addteacher']);
-//Route::get('/store',['as'=>'store','uses'=>'studentlist_controller@store']);
-Route::POST('/store',['as'=>'store','uses'=>'teachers_controller@store']);
+Route::POST('/teacherstore',['as'=>'teacherstore','uses'=>'teachers_controller@store']);
 Route::get('/editTeacher','teachers_controller@editteacher');
+Route::get('/editteacherinfo/{id}', ['as' => 'editteacherdata', 'uses' => 'teachers_controller@edit']);
+Route::POST('/updateteacherinfo', ['as' => 'updateteacherdata', 'uses' => 'teachers_controller@update']);
 
 
 Route::get('login',function(){
@@ -34,5 +38,5 @@ return view('admins.index');
 });
  /*Route::get('editStudent',function(){
   return view('admins.editStudent');
- });*/
-
+ });
+*/

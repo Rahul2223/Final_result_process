@@ -46,7 +46,19 @@
                     <div class="col-xs-6 col-sm-12 col-md-6">
                     <div class="form-group">
                     <label>Class</label>
-                      <input type="text" name="class" id="first_name" class="form-control input-sm" placeholder="class" required="required">
+                   
+                     <select class="form-control" name="class">
+                      <option value="">-----select----</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                      </select>
+
                     </div>
                   </div>
                   <div class="col-xs-6 col-sm-6 col-md-6">
@@ -78,7 +90,7 @@
                     <div class="form-group">
                     <label>Gender</label>
                       <!-- <input type="text" name="gender" id="first_name" class="form-control input-sm" placeholder="Gender"> -->
-                      <select class="form-control">
+                      <select class="form-control" name="gender">
                       <option value="">-----select----</option>
                         <option>Male</option>
                         <option>Female</option>

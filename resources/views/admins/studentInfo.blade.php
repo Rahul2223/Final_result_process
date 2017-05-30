@@ -9,7 +9,7 @@
           </div>
 
 
-        <div class="col-md-3">
+        <!-- <div class="col-md-3">
 
           <label>Previous year student Info</label>
         </div>
@@ -25,7 +25,7 @@
 
             </select>
 
-         </div>
+         </div> -->
 
          <div class="style"></div>
      </div>
@@ -83,7 +83,7 @@
   <td>{{$studentinfo->dob}}</td>
   <td>{{$studentinfo->address}}</td>
   <td>{{$studentinfo->contact}}</td>
-  <td><a class="btn btn-primary" href="{{url('editStudent')}}" role="button"> Edit</a> <a class="btn btn-primary" href="" role="button">Delete</a> </td>
+  <td><a class="btn btn-primary" href="{{route('editstudentdata',$studentinfo->id)}}" role="button"> Edit</a> <a class="btn btn-primary" href="" role="button">Delete</a> </td>
 
 </tr>
 

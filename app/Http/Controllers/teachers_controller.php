@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Teacherinfo;
 use DB;
+use Illuminate\support\Facades\Input;
+use Redirect;
 
 class teachers_controller extends Controller
 {
@@ -47,6 +49,9 @@ public function store(Request $request)
 
     ]);
 
+/*  $input1=$request->all();
+ Teacherinfo::create($input1);
+*/
 $teacherinfo=new Teacherinfo;
 
 $teacherinfo->name=$request->fullname;
@@ -58,6 +63,21 @@ $teacherinfo->address=$request->address;
 $teacherinfo->save();
 return redirect('/teacherlist')->withSuccess('teacherinfo add successfully');
 
+}
+public function edit($id)
+{
+    $teacherid=Teacherinfo::findOrFail($id);
+     return view('admins.editTeacher')->with('teacherid',$teacherid);
+}
+
+public function update(Request $request)
+{
+   $update=$request->all();
+   $ID=$request->id;
+
+   $updated=Teacherinfo::where('id','=',$ID)->update(array('name'=>$request->fullname,'fathers_name'=>$request->fname,'mothers_name'=>$request->mname,'subject'=>$request->subject,'contact'=>$request->contact,'address'=>$request->address));
+   
+   return redirect('/teacherlist');
 }
 }
 

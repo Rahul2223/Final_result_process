@@ -52,9 +52,10 @@
   <td>{{$teacherinfo->fathers_name}}</td>
   <td>{{$teacherinfo->mothers_name}}</td>
   <td>{{$teacherinfo->subject}}</td>
-  <td>{{$teacherinfo->address}}</td>
   <td>{{$teacherinfo->contact}}</td>
-  <td><a class="btn btn-primary" href="{{url('editStudent')}}" role="button"> Edit</a> <a class="btn btn-primary" href="" role="button">Delete</a> </td>
+  <td>{{$teacherinfo->address}}</td>
+  
+  <td><a class="btn btn-primary" href="{{route('editteacherdata',$teacherinfo->id)}}" role="button"> Edit</a> <a class="btn btn-primary" href="" role="button">Delete</a> </td>
 
 </tr>
 
