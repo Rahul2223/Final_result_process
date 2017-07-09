@@ -11,6 +11,7 @@
               <h3 class="panel-title"> Teacher Information</h3>
             </div>
             <div class="panel-body">
+            {{Session::get('message')}}
             {!!Form::open(['action'=>'teachers_controller@update'])!!}
               <form role="form">
                 <div class="row">
@@ -64,6 +65,13 @@
                     </div>
                   
                   </div>
+                 <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="form-group">
+                    <label>Password</label>
+                      <input type="text" name="password" id="password" class="form-control input-sm" placeholder="Password" value="{{$teacherid->password}}">
+                    </div>
+                  </div>
+
                 </div>
                   
                 

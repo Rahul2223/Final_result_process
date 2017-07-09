@@ -3,6 +3,12 @@
 
 
 @section ('admin-content')
+
+@if(session()->has('message'))
+    <div class="alert alert-success">
+        {{ session()->get('message') }}
+    </div>
+@endif
             <br>
                  <div class="col-md-6">
                  <a class="btn btn-primary" href="{{route('addstudent')}}" role="button" >Add Student</a>
@@ -31,7 +37,7 @@
      </div>
      <div class="style"></div>
      <br>
-     <br>
+     
   <table class="table table-bordered" >
   <div class="table-responsive">
 
@@ -55,21 +61,7 @@
       </tr>
     </thead>
     <tbody>
-   <!--  <tr>
-  <td>100036</td>
   
-  <td>Md. Sumon</td>
-  <td>9</td>
-  <td>10</td>
-  <td>Md. Faruk</td>
-  <td>Mst. Mona</td>
-  <td>Male</td>
-  <td>14/02/1997</td>
-  <td>Sagarpara,Rajshahi</td>
-  <td>123812986</td>
-  <td><a class="btn btn-primary" href="{{url('editStudent')}}" role="button"> Edit</a> <a class="btn btn-primary" href="" role="button">Delete</a> </td>
-
-</tr> -->
 
 @foreach ($studentlist as $studentinfo)
 <tr>
@@ -83,7 +75,7 @@
   <td>{{$studentinfo->dob}}</td>
   <td>{{$studentinfo->address}}</td>
   <td>{{$studentinfo->contact}}</td>
-  <td><a class="btn btn-primary" href="{{route('editstudentdata',$studentinfo->id)}}" role="button"> Edit</a> <a class="btn btn-primary" href="" role="button">Delete</a> </td>
+  <td><a class="btn btn-primary" href="{{route('editstudentData',$studentinfo->id)}}" role="button"> Edit</a> <a class="btn btn-primary" href="{{route('studentdelete',$studentinfo->id)}} " onclick="return confirm('Are you sure you want to delete this item?');"  role="button">Delete</a> </td>
 
 </tr>
 

@@ -27,7 +27,7 @@ public function studentList()
 
 public function index()
 {
-	return view('admins.index');
+return redirect('/login');
 }
 
 
@@ -44,7 +44,9 @@ public function editstudent()
 {
     return view('admins.studentInfo');
 }
-*/public function store(Request $request)
+*/
+
+public function store(Request $request)
 {
 
  $this->validate($request,[
@@ -78,8 +80,8 @@ $studentinfo->contact=$request->contact;
 $studentinfo->address=$request->address;
 $studentinfo->save();
 $ID=$studentinfo->id;
-return redirect('/studentlist')->withSuccess('Studentinfo add successfully');
 
+return redirect('/studentlist')->with('message', 'Student information add successfully');
 }
 /*
 public function edit($id)
@@ -88,6 +90,14 @@ public function edit($id)
     return view::make('user.update')->with('user',$user);
 }
 */
+public function delete($id)
+{
+   $studentid=Studentinfo::findOrfail($id);
+   $studentid->delete();
+   return redirect('/studentlist');
+} 
+
+
 public function edit($id)
 {
     
@@ -98,6 +108,7 @@ public function edit($id)
     
    return view('admins.editStudent')->with('studentid',$studentid);
 }
+
 public function update(Request $request)
 {
    $update=$request->all();

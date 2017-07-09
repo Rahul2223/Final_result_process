@@ -25,7 +25,6 @@
 
     <!-- Custom Fonts -->
     <link href="{!!asset('vendor/font-awesome/css/font-awesome.min.css')!!}" rel="stylesheet" type="text/css">
-
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -48,14 +47,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-               
-                <div style="width:1260px;">
                 <a class="navbar-brand" href="index.html">Result process</a>
-                </div>
-                
-                <div style="float: right;margin-top:10px;"><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></div>
-                
-               
             </div>
             <!-- /.navbar-header -->
 
@@ -76,28 +68,14 @@
                             </div>
                             <!-- /input-group -->
                         </li>
-                          <li><a  href="{{url('index')}}">Admin</a> </li>
+                          <li><a  href="{{url('classteacherindex')}}">Class Teacher Panel</a> </li>
 
-                        <li><a  href="{{route('studentinfo')}}">Student</a> </li>
+                        <li><a  href="{{url('student')}}">Student</a> </li>
     <!--    <li><a href="class.html"> Class  </a></li> -->
-        <li><a href="{{route('teacherinfo')}}"> Teacher</a></li>
-        <li><a href="{{url('classteacherinfo')}}">Class Teacher</a></li>
-        <li><a href="{{url('subteacher')}}">Subject Teacher</a></li>
-        <!-- <li><a class="collapsed active" href="{{url('class')}}">Class</a>
-                <ul class="sub-menu collapse" >
-      
-                          <li><a  href=""> Class One</a></li>
-                          <li><a  href="">Class Two</a></li>
-                          <li><a  href="">Class Three</a></li>
-                          <li><a  href="">Class Four</a></li>
-                          <li><a  href="">Class Five</a></li>
-                        
-                         </ul>
-            </li> -->
-        <!-- <li><a href="exam.html"> Exam List </a></li>
-        <li><a href="marksSheet.html">MarkSheet</a> -->
-        <li><a href="{{url('viewresult')}}">View Result</a></li>
-        <li><a href="{{ url('/logout') }}">Logout</a></li>
+                        <li><a href="{{url('teacher')}}"> Subject Teacher </a></li>
+                        <li><a href="{{url('mark')}}">Student Mark List</a></li>
+                       <!--  <li><a href="classTechMarksView.html">View Result</a></li> -->
+        
          </li>
                     </ul>
                 </div>
@@ -108,8 +86,12 @@
 
         <div id="page-wrapper">
             <div class="row">
-             @yield('admin-content')     
-            
+                
+         <!-- <center><h1>Class Techer of Class Five</h1></center> --> 
+          @yield('classteacher-content')   
+          
+
+
         </div>
         <!-- /#page-wrapper -->
 
