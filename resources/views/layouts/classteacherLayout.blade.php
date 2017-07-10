@@ -72,7 +72,7 @@
 
                         <li><a  href="{{url('student')}}">Student</a> </li>
     <!--    <li><a href="class.html"> Class  </a></li> -->
-                        <li><a href="{{url('teacher')}}"> Subject Teacher </a></li>
+                        <!-- <li><a href="{{url('teacher')}}"> Subject Teacher </a></li> -->
                         <li><a href="{{url('mark')}}">Student Mark List</a></li>
                        <!--  <li><a href="classTechMarksView.html">View Result</a></li> -->
         
